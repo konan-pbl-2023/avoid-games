@@ -1,2 +1,5 @@
-# PrototypeAPI22
-Android SDK API22 用プロジェクトのひな型
+# avoid-games
+## チーム：
+Team-D
+## アプリ内容：
+｛内容を書いてください｝
