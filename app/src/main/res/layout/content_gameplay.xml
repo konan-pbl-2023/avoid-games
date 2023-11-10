@@ -7,10 +7,10 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="410dp"
-        android:layout_height="731dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/imageView3"
+        android:layout_width="413dp"
+        android:layout_height="730dp"
         app:srcCompat="@drawable/img_game"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="1dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
