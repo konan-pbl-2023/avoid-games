@@ -16,6 +16,11 @@
             android:name=".FINISH1"
             android:exported="false"
             android:label="@string/title_activity_finish1"
+        </activity>
+        <activity
+            android:name=".gameplay"
+            android:exported="false"
+            android:label="@string/title_activity_gameplay"
             android:theme="@style/Theme.PrototypeAPI22" />
         <activity
             android:name=".MainActivity"
