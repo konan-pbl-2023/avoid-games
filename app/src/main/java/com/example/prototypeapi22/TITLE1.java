@@ -16,7 +16,6 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.prototypeapi22.databinding.ActivityTitle1Binding;
 
-
 public class TITLE1 extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
