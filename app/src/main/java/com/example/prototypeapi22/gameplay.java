@@ -1,12 +1,15 @@
 package com.example.prototypeapi22;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.prototypeapi22.databinding.ActivityFinish1Binding;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
+import android.widget.Button;
 
 import androidx.core.view.WindowCompat;
 import androidx.navigation.NavController;
@@ -29,11 +32,6 @@ public class gameplay extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.toolbar);
-
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_gameplay);
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,12 +40,18 @@ public class gameplay extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        setContentView(binding.getRoot());
+
+        Button button = findViewById(R.id.next);
+        button.setOnClickListener(v ->
+                next()
+        );
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_gameplay);
-        return NavigationUI.navigateUp(navController, appBarConfiguration)
-                || super.onSupportNavigateUp();
+    void next(){
+        Intent intent = new Intent(this, FINISH1.class);
+        finishAndRemoveTask();
+        startActivity(intent);
     }
 }

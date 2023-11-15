@@ -40,9 +40,6 @@ public class FINISH1 extends AppCompatActivity {
     }
     void restart(){
         Intent intent = new Intent(this, TITLE1.class);
-//        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//        finish();
-//        finishAfterTransition();
         finishAndRemoveTask();
         startActivity(intent);
     }
