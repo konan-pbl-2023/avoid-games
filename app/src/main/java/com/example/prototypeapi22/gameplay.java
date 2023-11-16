@@ -30,8 +30,6 @@ public class gameplay extends AppCompatActivity {
 
         binding = GameplayBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        setSupportActionBar(binding.toolbar);
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,7 +64,7 @@ public class gameplay extends AppCompatActivity {
         findViewById(R.id.next).setOnClickListener(new View.OnClickListener() {
             @Override
                 public void onClick(View v) {
-                    Snackbar.make(v, "ボタン３が押されました", Snackbar.LENGTH_SHORT).show();
+
                 }
             });
 
