@@ -24,6 +24,7 @@ public class gameplay extends AppCompatActivity {
     private AppBarConfiguration appBarConfiguration;
     private GameplayBinding binding;
 
+    int cnt = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,14 +84,12 @@ public class gameplay extends AppCompatActivity {
     }
 /*
     int syougai[] = {0, 1, 1, 2, 1, 0, 1, 2, 2, 1};
-    int jikix = 540;
     int syougaix;
     int syougaiy;
     float syougaispeed;
 
     int r = 180;//hankei
     int NUM = 10;
-    int cnt = 1;
     int i,life;
     /*
     左矢印のボタンで左に、右矢印のボタンで右に行く
@@ -113,15 +112,17 @@ public class gameplay extends AppCompatActivity {
     }
     for(i=0;i<NUM;i++)
     {
-        if (syougai == 0) {
+        if (syougai[i] == 0) {
             syougaix = 180;
         }
-        if (syougai == 1) {
+        if (syougai[i] == 1) {
             syougaix = 540;
         }
-        if (syougai == 2) {
+        if (syougai[i] == 2) {
             syougaix = 900;
         }
+        if(i==NUM-1){
+            i=0;
     }
         if(dist(jikix,180,syougaix,syougaiy)<180)
         {
