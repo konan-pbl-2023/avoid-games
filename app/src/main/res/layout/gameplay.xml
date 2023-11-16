@@ -10,24 +10,20 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
+        android:fitsSystemWindows="true"/>
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
+    <include
+        android:id="@+id/include"
+        layout="@layout/content_gameplay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_anchor="@+id/include"
+        app:layout_anchorGravity="center" />
 
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <include layout="@layout/content_gameplay" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+    <ImageView
+        android:id="@+id/jiki"
+        android:layout_width="126dp"
+        android:layout_height="248dp"
+        app:srcCompat="@drawable/img" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
