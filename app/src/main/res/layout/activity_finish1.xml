@@ -8,21 +8,21 @@
     android:fitsSystemWindows="true"
     tools:context=".FINISH1">
 
-   <ImageView
-    android:id="@+id/imageView2"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_anchor="@+id/imageView2"
-    app:layout_anchorGravity="center"
-    app:srcCompat="@drawable/img_finish" />
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/finishnew" />
 
     <Button
         android:id="@+id/restart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="88dp"
         android:text="RESTART"
+        android:textColorLink="#FD884F"
         app:layout_anchor="@+id/include"
-        app:layout_anchorGravity="center" />
+        app:layout_anchorGravity="center"
+        app:strokeColor="#FD884F" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
