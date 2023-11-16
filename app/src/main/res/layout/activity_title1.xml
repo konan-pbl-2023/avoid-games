@@ -15,23 +15,33 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
     ]]>
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_title" />
+        android:id="@+id/imageView4"
+        android:layout_width="409dp"
+        android:layout_height="733dp"
+        app:srcCompat="@drawable/titlenew"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="-1dp" />
 
     <Button
         android:id="@+id/start"
         android:layout_width="350dp"
         android:layout_height="64dp"
+        android:backgroundTint="#FD8851"
         android:text="お散歩に行く"
+        app:iconSize="30dp"
         app:layout_anchor="@+id/imageView"
         app:layout_anchorGravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -39,6 +49,7 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.745" />
+        app:layout_constraintVertical_bias="0.745"
+        app:strokeColor="#FD864F" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
