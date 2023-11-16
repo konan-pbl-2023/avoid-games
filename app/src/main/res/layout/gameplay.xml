@@ -33,8 +33,22 @@
         android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="next"
         app:layout_anchor="@+id/include2"
         app:layout_anchorGravity="center" />
+
+    <Button
+        android:id="@+id/hidari"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hidari" />
+
+    <Button
+        android:id="@+id/migi"
+        android:layout_width="162dp"
+        android:layout_height="154dp"
+        android:text="migi"
+        app:layout_anchor="@+id/fab"
+        app:layout_anchorGravity="start|center" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
