@@ -22,8 +22,8 @@
 
     <ImageView
         android:id="@+id/jiki"
-        android:layout_width="129dp"
-        android:layout_height="251dp"
+        android:layout_width="127dp"
+        android:layout_height="241dp"
         app:srcCompat="@drawable/img" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
