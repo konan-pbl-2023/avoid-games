@@ -40,6 +40,35 @@ public class gameplay extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        /*
+        findViewById(R.id.hidari).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(cnt==0){
+                    cnt=0;
+                }
+                else{
+                    cnt--;
+                }
+        });
+        findViewById(R.id.migi).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(cnt==2){
+                    cnt=2;
+                }
+                else{
+                    cnt++;
+                }
+            }
+        });
+*/
+        findViewById(R.id.next).setOnClickListener(new View.OnClickListener() {
+            @Override
+                public void onClick(View v) {
+                    Snackbar.make(v, "ボタン３が押されました", Snackbar.LENGTH_SHORT).show();
+                }
+            });
 
         setContentView(binding.getRoot());
 
@@ -54,38 +83,52 @@ public class gameplay extends AppCompatActivity {
         finishAndRemoveTask();
         startActivity(intent);
     }
-}
-    /*
-    int syougai[]={0,1,1,2,1,0,1,2,2,1};
-    int jikix=540;
-    int syougaix[10];
-    int syougaiy[10];
-    int r=180;//hankei
-    int NUM=10;
-    int cnt=1;
-    int i;
+/*
+    int syougai[] = {0, 1, 1, 2, 1, 0, 1, 2, 2, 1};
+    int jikix = 540;
+    int syougaix;
+    int syougaiy;
+    float syougaispeed;
+
+    int r = 180;//hankei
+    int NUM = 10;
+    int cnt = 1;
+    int i,life;
     /*
     左矢印のボタンで左に、右矢印のボタンで右に行く
-     */
-    /*
-    if(cnt==0){
-        jikix=180;
+    */
+        /*
+    if(cnt==0)
+
+    {
+        jikix = 180;
     }
-    if(cnt==1){
-        jikix=540;
+    if(cnt==1)
+
+    {
+        jikix = 540;
     }
-    if(cnt==2){
-        jikix=900;
+    if(cnt==2)
+
+    {
+        jikix = 900;
     }
-    for(i=0;i<NUM;i++){
-        if(syougai[i]==0){
-            syougaix[i]=180;
+    for(i=0;i<NUM;i++)
+    {
+        if (syougai == 0) {
+            syougaix = 180;
         }
-        if(syougai[i]==1){
-            syougaix[i]=540;
+        if (syougai == 1) {
+            syougaix = 540;
         }
-        if(syougai[i]==2){
-            syougaix[i]=900;
+        if (syougai == 2) {
+            syougaix = 900;
+        }
+    }
+        if(dist(jikix,180,syougaix,syougaiy)<180)
+        {
+            life--;
         }
     }
 */
+}
