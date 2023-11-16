@@ -18,7 +18,6 @@
     <include
         android:id="@+id/include2"
         layout="@layout/content_gameplay"
-        android:layout_height="match_parent"
         app:layout_anchor="@+id/next"
         app:layout_anchorGravity="center"
         tools:layout_editor_absoluteX="0dp"
