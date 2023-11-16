@@ -17,6 +17,7 @@
     <include
         android:id="@+id/include2"
         layout="@layout/content_gameplay"
+        android:layout_height="match_parent"
         app:layout_anchor="@+id/next"
         app:layout_anchorGravity="center" />
 
@@ -50,5 +51,11 @@
         android:text="migi"
         app:layout_anchor="@+id/fab"
         app:layout_anchorGravity="start|center" />
+
+    <ImageView
+        android:id="@+id/jiki"
+        android:layout_width="117dp"
+        android:layout_height="192dp"
+        app:srcCompat="@drawable/img" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
