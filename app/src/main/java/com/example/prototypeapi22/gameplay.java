@@ -30,38 +30,29 @@ public class gameplay extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         binding = GameplayBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-        binding.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAnchorView(R.id.fab)
-                        .setAction("Action", null).show();
-            }
-        });
-        /*
+        setContentView(R.layout.gameplay);
+
+
         findViewById(R.id.hidari).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(cnt==0){
-                    cnt=0;
-                }
-                else{
+                if (cnt == 0) {
+                    cnt = 0;
+                } else {
                     cnt--;
                 }
+            }
         });
         findViewById(R.id.migi).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(cnt==2){
-                    cnt=2;
-                }
-                else{
+                if (cnt == 2) {
+                    cnt = 2;
+                } else {
                     cnt++;
                 }
             }
         });
-*/
         findViewById(R.id.next).setOnClickListener(new View.OnClickListener() {
             @Override
                 public void onClick(View v) {
