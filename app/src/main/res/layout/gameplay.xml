@@ -21,9 +21,9 @@
         app:layout_anchorGravity="center" />
 
     <ImageView
-        android:id="@+id/jiki"
-        android:layout_width="127dp"
-        android:layout_height="241dp"
+        android:id="@+id/imageView2"
+        android:layout_width="121dp"
+        android:layout_height="225dp"
         app:srcCompat="@drawable/img" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
