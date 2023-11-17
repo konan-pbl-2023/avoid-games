@@ -28,18 +28,24 @@
         android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#2196F3"
         android:text="next"
+        android:textColorHighlight="#F44336"
+        android:textColorLink="#F44336"
         app:layout_anchor="@+id/include2"
         app:layout_anchorGravity="center"
         app:layout_constraintBottom_toBottomOf="@+id/include2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#FFFFFF"
+        app:strokeColor="#FD884F" />
 
     <Button
         android:id="@+id/hidari"
         android:layout_width="95dp"
         android:layout_height="80dp"
+        android:backgroundTint="#FD884F"
         android:text="hidari"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/include2"
@@ -52,6 +58,7 @@
         android:id="@+id/migi"
         android:layout_width="95dp"
         android:layout_height="80dp"
+        android:backgroundTint="#FD884F"
         android:text="migi"
         app:layout_anchor="@+id/fab"
         app:layout_anchorGravity="start|center"
@@ -68,10 +75,9 @@
         android:layout_height="192dp"
         app:layout_constraintBottom_toBottomOf="@+id/include2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/include2"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.777"
         app:srcCompat="@drawable/img" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

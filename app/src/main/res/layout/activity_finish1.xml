@@ -18,6 +18,7 @@
         android:id="@+id/restart"
         android:layout_width="150dp"
         android:layout_height="88dp"
+        android:backgroundTint="#FD884F"
         android:text="RESTART"
         android:textColorLink="#FD884F"
         app:layout_anchor="@+id/include"
