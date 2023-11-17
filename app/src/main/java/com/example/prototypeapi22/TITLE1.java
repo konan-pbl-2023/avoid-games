@@ -25,6 +25,7 @@ public class TITLE1 extends AppCompatActivity {
     private ActivityTitle1Binding binding;
     private MediaPlayer mediaPlayer;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
