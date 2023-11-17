@@ -31,7 +31,7 @@ public class gameplay2 extends AppCompatActivity {
     private AppBarConfiguration appBarConfiguration;
     private Gameplay2Binding binding;
 
-    private ImageView jiki;
+    private ImageView jiki2;
     int cnt2 = 1;
     private MediaPlayer mediaPlayer;
 
@@ -49,20 +49,20 @@ public class gameplay2 extends AppCompatActivity {
         findViewById(R.id.hidari2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (cnt == 0) {
-                    cnt = 0;
+                if (cnt2 == 0) {
+                    cnt2 = 0;
                 } else {
-                    cnt--;
+                    cnt2--;
                 }
             }
         });
         findViewById(R.id.migi2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (cnt == 2) {
-                    cnt = 2;
+                if (cnt2 == 2) {
+                    cnt2 = 2;
                 } else {
-                    cnt++;
+                    cnt2++;
                 }
             }
         });
