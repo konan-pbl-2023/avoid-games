@@ -33,9 +33,13 @@
             android:label="@string/title_activity_gameplay"
             android:theme="@style/Theme.PrototypeAPI22" />
         <activity
+            android:name=".gameplay2"
+            android:exported="false"
+            android:theme="@style/Theme.PrototypeAPI22" />
+
+        <activity
             android:name=".MainActivity"
             android:exported="true">
-
         </activity>
     </application>
 

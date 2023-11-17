@@ -8,6 +8,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -31,7 +32,8 @@ public class gameplay extends AppCompatActivity {
     private GameplayBinding binding;
 
     private ImageView jiki;
-
+    private float initJikiX = 387f;
+    private float jikiY;
 
     int cnt = 1;
 
@@ -39,32 +41,39 @@ public class gameplay extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         binding = GameplayBinding.inflate(getLayoutInflater());
         setContentView(R.layout.gameplay);
 
-        jiki = findViewById(R.id.jiki);
-        jiki.setX(-80.0f);
-        jiki.setY(100.0f);
+        jiki = (ImageView) findViewById(R.id.jiki);
 
         findViewById(R.id.hidari).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.d("prev_cnt", String.valueOf(cnt) );
+
                 if (cnt == 0) {
                     cnt = 0;
                 } else {
                     cnt--;
                 }
+                float jikiX = initJikiX * cnt;
+                jiki.setX(jikiX);
+                Log.d("cnt", String.valueOf(cnt) + "/pos:"+  String.valueOf(jiki.getX()));
             }
         });
         findViewById(R.id.migi).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.d("prev_cnt", String.valueOf(cnt) );
                 if (cnt == 2) {
                     cnt = 2;
                 } else {
                     cnt++;
                 }
+
+                float jikiX = initJikiX * cnt;
+                jiki.setX(jikiX);
+                Log.d("cnt", String.valueOf(cnt) + "/pos:"+  String.valueOf(jiki.getX()));
             }
         });
         findViewById(R.id.next).setOnClickListener(new View.OnClickListener() {
@@ -74,14 +83,23 @@ public class gameplay extends AppCompatActivity {
                 }
             });
 
+        findViewById(R.id.kisetu).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                change();
+            }
+        });
 
 
-        setContentView(binding.getRoot());
 
         Button button = findViewById(R.id.next);
         button.setOnClickListener(v ->
                 next()
         );
+
+//        Button button2 = findViewById(R.id.kisetu);
+//        button2.setOnClickListener(v ->
+//        );
     }
 
 
@@ -90,6 +108,11 @@ public class gameplay extends AppCompatActivity {
 
     void next() {
         Intent intent = new Intent(this, FINISH1.class);
+        finishAndRemoveTask();
+        startActivity(intent);
+    }
+    void change() {
+        Intent intent = new Intent(this, gameplay2.class);
         finishAndRemoveTask();
         startActivity(intent);
     }

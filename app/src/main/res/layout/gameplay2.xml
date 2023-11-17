@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="413dp"
         android:layout_height="734dp"
-        app:srcCompat="@drawable/IMG_game3"
-        tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="-2dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_game2" />
 
     <Button
         android:id="@+id/migi2"
@@ -19,7 +20,7 @@
         android:layout_height="80dp"
         android:backgroundTint="#FD884F"
         android:text="ー＞"
-        app:layout_anchor="@+id/fab"
+        app:layout_anchor="@+id/imageView5"
         app:layout_anchorGravity="start|center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +37,7 @@
         android:backgroundTint="#FD884F"
         android:text="＜－"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/include2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
         app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -51,9 +52,9 @@
         android:text="散歩を終了する"
         android:textColorHighlight="#F44336"
         android:textColorLink="#F44336"
-        app:layout_anchor="@+id/include2"
+        app:layout_anchor="@+id/imageView5"
         app:layout_anchorGravity="center"
-        app:layout_constraintBottom_toBottomOf="@+id/include2"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -68,7 +69,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/include2"
+        app:layout_constraintTop_toTopOf="@+id/imageView5"
         app:layout_constraintVertical_bias="0.777"
         app:srcCompat="@drawable/img" />
 

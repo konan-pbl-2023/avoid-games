@@ -6,27 +6,22 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".gameplay">
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
-
-    </com.google.android.material.appbar.AppBarLayout>
 
     <include
         android:id="@+id/include2"
         layout="@layout/content_gameplay"
-        android:layout_height="match_parent"
         app:layout_anchor="@+id/next"
         app:layout_anchorGravity="center"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="149dp"
+        android:layout_height="53dp"
         android:backgroundTint="#2196F3"
         android:text="散歩を終了する"
         android:textColorHighlight="#F44336"
@@ -35,8 +30,10 @@
         app:layout_anchorGravity="center"
         app:layout_constraintBottom_toBottomOf="@+id/include2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.099"
         app:rippleColor="#FFFFFF"
         app:strokeColor="#FD884F" />
 
@@ -59,7 +56,6 @@
         android:layout_height="80dp"
         android:backgroundTint="#FD884F"
         android:text="ー＞"
-        app:layout_anchor="@+id/fab"
         app:layout_anchorGravity="start|center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,11 +68,23 @@
         android:id="@+id/jiki"
         android:layout_width="117dp"
         android:layout_height="192dp"
-        app:layout_constraintBottom_toBottomOf="@+id/include2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/include2"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.795"
         app:srcCompat="@drawable/img" />
+
+    <Button
+        android:id="@+id/kisetu"
+        android:layout_width="124dp"
+        android:layout_height="59dp"
+        android:text="季節を変更"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.931"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.099" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
