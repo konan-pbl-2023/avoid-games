@@ -27,6 +27,7 @@
         android:text="散歩を終了する"
         android:textColorHighlight="#F44336"
         android:textColorLink="#F44336"
+        android:visibility="invisible"
         app:layout_anchor="@+id/include2"
         app:layout_anchorGravity="center"
         app:layout_constraintBottom_toBottomOf="@+id/include2"

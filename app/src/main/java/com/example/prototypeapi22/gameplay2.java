@@ -74,6 +74,13 @@ public class gameplay2 extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.kisetu2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                change();
+            }
+        });
+
 
         Button button = findViewById(R.id.next2);
         button.setOnClickListener(v ->
@@ -84,6 +91,12 @@ public class gameplay2 extends AppCompatActivity {
 
     void next() {
         Intent intent = new Intent(this, FINISH1.class);
+        finishAndRemoveTask();
+        startActivity(intent);
+    }
+
+    void change() {
+        Intent intent = new Intent(this, gameplay.class);
         finishAndRemoveTask();
         startActivity(intent);
     }

@@ -33,6 +33,7 @@ public class gameplay extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private GameplayBinding binding;
+    private Timer timer;
 
     private ImageView jiki;
     private ImageView syougai;
@@ -56,7 +57,7 @@ public class gameplay extends AppCompatActivity {
 
         syougaiY=initsyougaiY;
 
-        Timer timer = new Timer();
+        timer = new Timer();
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
@@ -79,7 +80,7 @@ public class gameplay extends AppCompatActivity {
                     i=0;
                 }
                 obstacle.setY(syougaiY);
-                if(((Math.abs(jiki.getX()-obstacle.getX())<10))&&((Math.abs(jiki.getY()-obstacle.getY())<50))){
+                if(((Math.abs(jiki.getX()-obstacle.getX())<10))&&((Math.abs(jiki.getY()-obstacle.getY())<250))){
                             next();
                 }
 
@@ -148,11 +149,13 @@ public class gameplay extends AppCompatActivity {
 
 
     void next() {
+        timer.cancel();
         Intent intent = new Intent(this, FINISH1.class);
         finishAndRemoveTask();
         startActivity(intent);
     }
     void change() {
+        timer.cancel();
         Intent intent = new Intent(this, gameplay2.class);
         finishAndRemoveTask();
         startActivity(intent);
