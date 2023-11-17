@@ -83,22 +83,6 @@ public class gameplay extends AppCompatActivity {
                 next()
         );
     }
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        if(cnt==0)
-        {
-            jiki.setX(180);
-        }
-        if(cnt==1)
-        {
-            jiki.setScaleX(540);
-        }
-        if(cnt==2)
-        {
-            jiki.setScaleX(900);
-        }
-        return true;
-    }
 
 
 
