@@ -1,6 +1,7 @@
 package com.example.prototypeapi22;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -17,10 +18,13 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.prototypeapi22.databinding.ActivityTitle1Binding;
 
+
 public class TITLE1 extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityTitle1Binding binding;
+    private MediaPlayer mediaPlayer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,5 +37,14 @@ public class TITLE1 extends AppCompatActivity {
         {
             startActivity(new Intent(this, gameplay.class));
         });
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.hajimari);
+        mediaPlayer.start();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mediaPlayer.stop();
     }
 }
