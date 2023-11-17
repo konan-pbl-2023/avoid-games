@@ -182,7 +182,7 @@ public class gameplay extends AppCompatActivity {
         if (syougai[i] == 2) {
             syougaix = 900;
         }
-        if(i==NUM-1){
+        if(i==NUM-1)
             i=0;
     }
         if(dist(jikix,180,syougaix,syougaiy)<180)
