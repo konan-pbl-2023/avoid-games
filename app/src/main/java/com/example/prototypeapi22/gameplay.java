@@ -17,6 +17,12 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+
 import com.example.prototypeapi22.databinding.GameplayBinding;
 
 public class gameplay extends AppCompatActivity {
@@ -24,7 +30,12 @@ public class gameplay extends AppCompatActivity {
     private AppBarConfiguration appBarConfiguration;
     private GameplayBinding binding;
 
+    private ImageView jiki;
+
+
     int cnt = 1;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +43,9 @@ public class gameplay extends AppCompatActivity {
         binding = GameplayBinding.inflate(getLayoutInflater());
         setContentView(R.layout.gameplay);
 
+        jiki = findViewById(R.id.jiki);
+        jiki.setX(-80.0f);
+        jiki.setY(100.0f);
 
         findViewById(R.id.hidari).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +74,8 @@ public class gameplay extends AppCompatActivity {
                 }
             });
 
+
+
         setContentView(binding.getRoot());
 
         Button button = findViewById(R.id.next);
@@ -67,12 +83,33 @@ public class gameplay extends AppCompatActivity {
                 next()
         );
     }
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        if(cnt==0)
+        {
+            jiki.setX(180);
+        }
+        if(cnt==1)
+        {
+            jiki.setScaleX(540);
+        }
+        if(cnt==2)
+        {
+            jiki.setScaleX(900);
+        }
+        return true;
+    }
+
+
+
+
 
     void next() {
         Intent intent = new Intent(this, FINISH1.class);
         finishAndRemoveTask();
         startActivity(intent);
     }
+
 /*
     int syougai[] = {0, 1, 1, 2, 1, 0, 1, 2, 2, 1};
     int syougaix;
@@ -86,21 +123,6 @@ public class gameplay extends AppCompatActivity {
     左矢印のボタンで左に、右矢印のボタンで右に行く
     */
         /*
-    if(cnt==0)
-
-    {
-        jikix = 180;
-    }
-    if(cnt==1)
-
-    {
-        jikix = 540;
-    }
-    if(cnt==2)
-
-    {
-        jikix = 900;
-    }
     for(i=0;i<NUM;i++)
     {
         if (syougai[i] == 0) {
