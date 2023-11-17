@@ -27,27 +27,70 @@ import android.widget.TextView;
 
 import com.example.prototypeapi22.databinding.GameplayBinding;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class gameplay extends AppCompatActivity {
 
 
     private AppBarConfiguration appBarConfiguration;
     private GameplayBinding binding;
+    private Timer timer;
 
     private ImageView jiki;
-    private float initJikiX = 387f;
+    private ImageView syougai;
+    private ImageView obstacle;
+    private float syougaiY;
+    private float initJikiX = 380f;
     private float jikiY;
-
+    private float initsyougaiY=0f;
+    private float initsyougaiX=380f;
+    private int i;
     int cnt = 1;
     private MediaPlayer mediaPlayer;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = GameplayBinding.inflate(getLayoutInflater());
         setContentView(R.layout.gameplay);
-
         jiki = (ImageView) findViewById(R.id.jiki);
+        obstacle = (ImageView) findViewById(R.id.syougai);
+
+        syougaiY=initsyougaiY;
+
+        timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                int syougai[] = {2, 1, 1, 2, 1, 0, 1, 2, 2, 1};
+                if (syougai[i] == 0) {
+                    obstacle.setX(0);
+                }
+                else if (syougai[i] == 1) {
+                    obstacle.setX(380);
+                }
+                else if (syougai[i] == 2) {
+                    obstacle.setX(760);
+                }
+                syougaiY+=10;
+                if(syougaiY==1800){
+                    syougaiY=initsyougaiY;
+                    i++;
+                }
+                if(i==10){
+                    i=0;
+                }
+                obstacle.setY(syougaiY);
+                if(((Math.abs(jiki.getX()-obstacle.getX())<10))&&((Math.abs(jiki.getY()-obstacle.getY())<250))){
+                            next();
+                }
+
+            }
+
+
+        }, 100, 10);
+
 
         findViewById(R.id.hidari).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +104,7 @@ public class gameplay extends AppCompatActivity {
                 }
                 float jikiX = initJikiX * cnt;
                 jiki.setX(jikiX);
+
                 Log.d("cnt", String.valueOf(cnt) + "/pos:"+  String.valueOf(jiki.getX()));
             }
         });
@@ -101,10 +145,12 @@ public class gameplay extends AppCompatActivity {
         );
         mediaPlayer = MediaPlayer.create(this, R.raw.dogsound);
         mediaPlayer.start();
+  
+
 
 //        Button button2 = findViewById(R.id.kisetu);
 //        button2.setOnClickListener(v ->
-//        );
+//          );
     }
     @Override
     protected void onPause() {
@@ -117,11 +163,13 @@ public class gameplay extends AppCompatActivity {
 
 
     void next() {
+        timer.cancel();
         Intent intent = new Intent(this, FINISH1.class);
         finishAndRemoveTask();
         startActivity(intent);
     }
     void change() {
+        timer.cancel();
         Intent intent = new Intent(this, gameplay2.class);
         finishAndRemoveTask();
         startActivity(intent);
@@ -151,7 +199,7 @@ public class gameplay extends AppCompatActivity {
         if (syougai[i] == 2) {
             syougaix = 900;
         }
-        if(i==NUM-1){
+        if(i==NUM-1)
             i=0;
     }
         if(dist(jikix,180,syougaix,syougaiy)<180)
