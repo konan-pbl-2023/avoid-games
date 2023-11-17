@@ -6,14 +6,6 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="412dp"
-        android:layout_height="733dp"
-        app:srcCompat="@drawable/img_game2"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <ImageView
         android:id="@+id/imageView5"
         android:layout_width="413dp"
         android:layout_height="734dp"
@@ -45,14 +37,14 @@
         android:text="散歩を終了する"
         android:textColorHighlight="#F44336"
         android:textColorLink="#F44336"
-        app:layout_anchor="@+id/include2"
+        app:layout_anchor="@+id/imageView5"
         app:layout_anchorGravity="center"
-        app:layout_constraintBottom_toBottomOf="@+id/include2"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.061"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.099"
+        app:layout_constraintVertical_bias="0.004"
         app:rippleColor="#FFFFFF"
         app:strokeColor="#FD884F" />
 
@@ -87,10 +79,14 @@
 
     <ImageView
         android:id="@+id/jiki2"
-        android:layout_width="129dp"
-        android:layout_height="214dp"
-        app:srcCompat="@drawable/img_inu2"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="392dp" />
+        android:layout_width="117dp"
+        android:layout_height="192dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.795"
+        app:srcCompat="@drawable/img_inu2" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
