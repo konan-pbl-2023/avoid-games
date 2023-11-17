@@ -1,6 +1,7 @@
 package com.example.prototypeapi22;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import com.example.prototypeapi22.databinding.ActivityFinish1Binding;
@@ -28,6 +29,7 @@ import com.example.prototypeapi22.databinding.GameplayBinding;
 
 public class gameplay extends AppCompatActivity {
 
+
     private AppBarConfiguration appBarConfiguration;
     private GameplayBinding binding;
 
@@ -36,6 +38,7 @@ public class gameplay extends AppCompatActivity {
     private float jikiY;
 
     int cnt = 1;
+    private MediaPlayer mediaPlayer;
 
 
     @Override
@@ -96,10 +99,17 @@ public class gameplay extends AppCompatActivity {
         button.setOnClickListener(v ->
                 next()
         );
+        mediaPlayer = MediaPlayer.create(this, R.raw.dogsound);
+        mediaPlayer.start();
 
 //        Button button2 = findViewById(R.id.kisetu);
 //        button2.setOnClickListener(v ->
 //        );
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mediaPlayer.stop();
     }
 
 

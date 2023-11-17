@@ -1,6 +1,7 @@
 package com.example.prototypeapi22;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import com.example.prototypeapi22.databinding.ActivityFinish1Binding;
@@ -36,7 +37,7 @@ public class gameplay2 extends AppCompatActivity {
     private float jikiY2;
 
     int cnt2 = 1;
-
+    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,10 +96,15 @@ public class gameplay2 extends AppCompatActivity {
         button.setOnClickListener(v ->
                 next()
         );
-
-//        Button button2 = findViewById(R.id.kisetu);
+        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.kurisumasusong);
+        mediaPlayer.start();//        Button button2 = findViewById(R.id.kisetu);
 //        button2.setOnClickListener(v ->
 //        );
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mediaPlayer.stop();
     }
 
 
