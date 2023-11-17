@@ -10,7 +10,9 @@
         android:id="@+id/imageView3"
         android:layout_width="413dp"
         android:layout_height="730dp"
-        app:srcCompat="@drawable/img_game"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="1dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_game" />
 </androidx.constraintlayout.widget.ConstraintLayout>
