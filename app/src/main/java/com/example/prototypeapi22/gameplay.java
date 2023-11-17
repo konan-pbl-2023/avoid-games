@@ -43,7 +43,6 @@ public class gameplay extends AppCompatActivity {
     private float jikiY;
     private float initsyougaiY=0f;
     private float initsyougaiX=380f;
-
     private int i;
     int cnt = 1;
 
