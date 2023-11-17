@@ -1,6 +1,7 @@
 package com.example.prototypeapi22;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import com.example.prototypeapi22.databinding.ActivityFinish1Binding;
@@ -31,6 +32,7 @@ import java.util.TimerTask;
 
 public class gameplay extends AppCompatActivity {
 
+
     private AppBarConfiguration appBarConfiguration;
     private GameplayBinding binding;
     private Timer timer;
@@ -45,6 +47,7 @@ public class gameplay extends AppCompatActivity {
     private float initsyougaiX=380f;
     private int i;
     int cnt = 1;
+    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -136,11 +139,23 @@ public class gameplay extends AppCompatActivity {
 
 
 
+        Button button = findViewById(R.id.next);
+        button.setOnClickListener(v ->
+                next()
+        );
+        mediaPlayer = MediaPlayer.create(this, R.raw.dogsound);
+        mediaPlayer.start();
+  
 
 
 //        Button button2 = findViewById(R.id.kisetu);
 //        button2.setOnClickListener(v ->
 //          );
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mediaPlayer.stop();
     }
 
 

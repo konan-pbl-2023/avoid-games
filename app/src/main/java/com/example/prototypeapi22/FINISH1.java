@@ -1,5 +1,6 @@
 package com.example.prototypeapi22;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -22,7 +23,7 @@ public class FINISH1 extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityFinish1Binding binding;
-
+    private MediaPlayer mediaPlayer;
 
 
     @Override
@@ -36,7 +37,14 @@ public class FINISH1 extends AppCompatActivity {
         button.setOnClickListener(v ->
                 restart()
         );
+        mediaPlayer = MediaPlayer.create(this, R.raw.owari);
+        mediaPlayer.start();
 
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mediaPlayer.stop();
     }
     void restart(){
         Intent intent = new Intent(this, TITLE1.class);
